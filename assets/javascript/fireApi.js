@@ -8,7 +8,7 @@ function fireApi(inputLocation){
 	
 
 	// var queryURL = "https://api.aerisapi.com/fires/within?p=" + inputLocation + "&radius=100mi&limit=10&filter=critical&client_id=38Kg3ZDxs3eiKihJ1pDYW&client_secret=Y2dpsgFp0570JXPe7Aeeam57UYVsIt0dIpa0nIEd";
-	var queryURL = "https://api.aerisapi.com/fires/within?p=" + inputLocation + "&radius=100mi&limit=10&filter=critical&client_id=KI9Ko5YMzlFiespqLZtT2&client_secret=q3Vlw43MZmVONKAky6YUzfMclXDoHMJko7UttLBG";
+	var queryURL = "https://api.aerisapi.com/fires/within?p=" + inputLocation + "&radius=2000mi&limit=10&filter=critical&client_id=KI9Ko5YMzlFiespqLZtT2&client_secret=q3Vlw43MZmVONKAky6YUzfMclXDoHMJko7UttLBG";
 	
 
 	function fireInfoObject (lat, lng, name, miles) {
@@ -26,34 +26,34 @@ function fireApi(inputLocation){
 	method: "GET"
 	}).done(function(result) {
 		
-		console.log("success: " + result.success);
-		console.log(result);
+		// console.log("success: " + result.success);
+		// console.log(result);
 		// console.log("error code: " + result.error.code);
 		
 		//if any errors
 		if(result.error) {
 			//if success, but no fires found
 			if(result.success == true){
-				console.log("first condition fired");
+				// console.log("first condition fired");
 				document.getElementById("searchAFire").innerHTML = "No Fires Nearby";
 			}
 			//if invalid input/location
 			else if (result.success == false){
-				console.log("second condition fired");
+				// console.log("second condition fired");
 				document.getElementById("searchAFire").innerHTML = "Invalid Location";
 			}
 		}
 		
 		//if successful and fires found
 		else if (result.success == true){
-			console.log("third condition fired");
+			// console.log("third condition fired");
 			document.getElementById("searchAFire").innerHTML = "Fires Found";
 
 			for(var i = 0; i < result.response.length; i++){
 
 				userInputLocation.lat = result.response[i].relativeTo.lat
 				userInputLocation.lng = result.response[i].relativeTo.long
-				console.log("user input location: " + userInputLocation);
+				// console.log("user input location: " + userInputLocation);
 
 				var fireInfo = new fireInfoObject(result.response[i].loc.lat, result.response[i].loc.long, result.response[i].report.name, result.response[i].report.areaMI);
 
@@ -79,7 +79,7 @@ function fireApi(inputLocation){
 	}
 
 		googleMapApi(userInputLocation, nearbyFiresArray);
-		console.log(nearbyFiresArray);
+		// console.log(nearbyFiresArray);
 
 	// create var for all things we want represented from json dump
 	});

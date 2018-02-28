@@ -46,14 +46,14 @@ var stateAbbrev = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', '
   //if user input is not a number
   if(isNaN(userPlace)) {
     var urlPlace = userPlace.toLowerCase().replace(/ /g, "+") + "," + userState.toLowerCase();
-    console.log(urlPlace);
+    // console.log(urlPlace);
     //alert("its not a number")
   }
   //if user input is a number
   else
   {
     var urlPlace = userPlace;
-    console.log(urlPlace);
+    // console.log(urlPlace);
     //alert("its a number")
   }
 
@@ -73,7 +73,7 @@ var stateAbbrev = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', '
     database.ref().push(newFire);
     
     //logs fire to console
-    console.log(newFire.fire);
+    // console.log(newFire.fire);
   
     fireApi(urlPlace);
     // clears the search field
@@ -84,17 +84,17 @@ var stateAbbrev = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', '
 // create firebase event for adding comments to database and a row in the html
 database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 
-  console.log(childSnapshot.val());
+  // console.log(childSnapshot.val());
 
   // Store everything into a variable.
   // var newFire = childSnapshot.val().fire;
   // console.log("newfire before comment: " + newFire);
   var newFire = childSnapshot.val().comment;
-  console.log("new fire: " + newFire);
+  // console.log("new fire: " + newFire);
   
 
   // Employee Info
-  console.log(newFire);
+  // console.log(newFire);
 
 if(newFire !== ""){
   // Add each train's data into the table

@@ -1,12 +1,9 @@
-
-
-
 function googleMapApi(mapCenter, fireArray) {
   $ ("#map").empty();
   $ ("#map").attr("style", "height: 500px; width: 100%;")
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 9,
+    zoom: 5,
     center: mapCenter
   });
 
