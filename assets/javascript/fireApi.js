@@ -1,9 +1,15 @@
+// Renewed API key as of 2/27/2018.
+// Secret Key: q3Vlw43MZmVONKAky6YUzfMclXDoHMJko7UttLBG
+// Access Id: KI9Ko5YMzlFiespqLZtT2
+
+
 function fireApi(inputLocation){
 
 	
 
-	var queryURL = "https://api.aerisapi.com/fires/within?p=" + inputLocation + "&radius=100mi&limit=10&filter=critical&client_id=38Kg3ZDxs3eiKihJ1pDYW&client_secret=Y2dpsgFp0570JXPe7Aeeam57UYVsIt0dIpa0nIEd";
-
+	// var queryURL = "https://api.aerisapi.com/fires/within?p=" + inputLocation + "&radius=100mi&limit=10&filter=critical&client_id=38Kg3ZDxs3eiKihJ1pDYW&client_secret=Y2dpsgFp0570JXPe7Aeeam57UYVsIt0dIpa0nIEd";
+	var queryURL = "https://api.aerisapi.com/fires/within?p=" + inputLocation + "&radius=100mi&limit=10&filter=critical&client_id=KI9Ko5YMzlFiespqLZtT2&client_secret=q3Vlw43MZmVONKAky6YUzfMclXDoHMJko7UttLBG";
+	
 
 	function fireInfoObject (lat, lng, name, miles) {
 		this.lat = lat;
