@@ -57,4 +57,9 @@ h2{
 
 footer {
   color:#b30000;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+text-align: center;
 }

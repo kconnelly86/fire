@@ -27,11 +27,11 @@
     <div id="map">
 
       <div class="Intro">
-          <h1 class="display"><strong>Wild Fire Checker</strong></h1>
+          <h1 class="display"><strong>Find-A-Fire</strong></h1>
           
           <p>Welcome! This website was created to ensure the safety of all during a fire crisis in your area. </p>
           
-          <p>Instruction: To use our website simply enter a zip code in the search bar below and you will be able to see all fires in the area on Google Maps. Either click your mouse over the affected area on Google Maps or select one of the fires under “Fires in the Area” section. You can see the name of the fire by selecting the pinpoint. <strong>To reset the page you must refresh.</strong></p>
+          <p>Instruction: To use the website simply enter a zip code,or city name in the search bar below and you will be able to see all fires within a 2000 mile radius on Google Maps. Either click your mouse over the affected area on Google Maps or select one of the fires under “Fires in the Area” section. You can see the name of the fire by selecting the pinpoint. <strong>To reset the page you must refresh.</strong></p>
       </div>
 
       <div id="imageDiv">
@@ -63,16 +63,21 @@
                 </tbody>
               </table>
           </div>
-
-
         </div>
 
         <!-- Add comments -->
         <div class="panel panel-primary">
           <div class ="panel-heading">
             <h2 id="searchAFire" class="panel-title"><strong>Add Comment</strong></h2>
-            <p>Below are user's comments on fires nation wide! To add to the comment section merely type in your comment in the text box below. When done click on the submit button below. </p>
+            <p>Below are user's comments on fires nation wide! <br> To add to the comment section merely type in your comment in the text box below, when done click on the submit button. </p>
           </div>
+          <div class="form-group">
+            <label for="role-input">Comment</label>
+            <input class="form-control" id="commInput" type="text" placeholder="Add Your Comment Here">
+          </div>
+
+
+
           <div class="panel-body">
             <form>
                 <div class="form-group">
@@ -81,17 +86,17 @@
                 </div>
 
                 <div class="dropdown">
-                	<form id="myForm">
-  						<select id="selectState">
-    					<option>Choose a state</option>
-  						</select>
+          <form id="myForm">
+            <select id="selectState">
+              <option>Choose a state</option>
+            </select>
 					</form>
 				</div>
         <br>
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <label for="role-input">Comment</label>
                   <input class="form-control" id="commInput" type="text" placeholder="Add Your Comment Here">
-                </div>
+                </div> -->
                 <button class="btn btn-danger" id="add-fire-btn" type="submit">Submit</button>
               
             </form>
